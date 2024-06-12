@@ -11,7 +11,8 @@ public class LoginSignup extends Application {
     public void start(Stage primaryStage) {
         try {
             // Pastikan path ini benar
-            Parent root = FXMLLoader.load(getClass().getResource("/login/login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/login/login.fxml"));
+            Parent root = loader.load();
             primaryStage.setTitle("Login and Signup");
 
             Scene scene = new Scene(root);
