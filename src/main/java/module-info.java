@@ -11,6 +11,7 @@ module caturkece.com.uas_pbo_caturkece_team {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
 
-    opens caturkece.com.uas_pbo_caturkece_team to javafx.fxml;
-    exports caturkece.com.uas_pbo_caturkece_team;
+    opens login to javafx.fxml;
+    exports login;
+
 }
