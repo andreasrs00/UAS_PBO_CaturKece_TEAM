@@ -1,41 +1,86 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Font/Montserrat-VariableFont_wght.ttf');
+}
 
+@font-face {
+    font-family: 'Jaro';
+    src: url('Font/Jaro-Regular-VariableFont_opsz.ttf');
+}
+
+/*
+Color 1 : #303841
+Color 2 : #3A4750
+Color 3 : #00ADB5 BIRU TERANG
+Color 4 : #EEEEEE putihnya
+*/
 
 .root {
-    -fx-font-family: Arial, sans-serif;
-    -fx-background-color: #f0f0f0;
+    -fx-font-family: 'Monstserrat';
     -fx-padding: 10px;
-}
-
-.button {
-    -fx-background-color: #4CAF50;
     -fx-text-fill: white;
-    -fx-padding: 10px 20px;
-    -fx-cursor: hand;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 4, 0.5, 0.0, 0.0);
-    -fx-transition: background-color 0.3s ease-in-out;
 }
 
-.button:hover {
-    -fx-background-color: #45a049;
+#leftBox {
+    -fx-background-color: #00ADB5;
+    -fx-alignment: center;
+    -fx-pref-width: 400px;
+    -fx-pref-height: 600px;
+    -fx-padding: 20;
 }
 
-.text-field, .password-field {
-    -fx-padding: 12px 20px;
-    -fx-border-color: #ccc;
-    -fx-border-width: 1px;
-    -fx-transition: border-color 0.3s ease-in-out;
+#caturLabel {
+    -fx-text-fill: #303841;
+    -fx-font-size: 60px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'jaro';
 }
 
-.text-field:focused, .password-field:focused {
-    -fx-border-color: #4CAF50;
+#loginPane {
+    -fx-padding: 20;
+    -fx-vgap: 8;
+    -fx-hgap: 8;
+    -fx-background-color: #303841;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
 }
 
-.fade-in {
-    -fx-opacity: 0;
-    -fx-animation: fadeIn 1s forwards;
+#loginLabel {
+    -fx-text-fill: #00ADB5;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Jaro';
 }
 
-@keyframes fadeIn {
-    from { -fx-opacity: 0; }
-    to { -fx-opacity: 1; }
+#loginLabelKata{
+    -fx-text-fill: #00ADB5;
+    -fx-font-size: 20px;
+    -fx-wrap-text: true;
+    -fx-max-width: 400px;
+}
+
+TextField, PasswordField {
+    -fx-pref-width: 240px;
+    -fx-pref-height: 30px;
+    -fx-border-color: #00ADB5;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 12 12;
+    -fx-font-family: 'Montserrat';
+    -fx-font-size: 16px;
+}
+
+Button {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 30px;
+    -fx-background-color: #00ADB5;
+    -fx-text-fill: #EEEEEE;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-size: 16px;
+}
+
+#forgotPasswordLabel {
+    -fx-text-fill: #00ADB5;
+    -fx-font-size: 16px;
 }
