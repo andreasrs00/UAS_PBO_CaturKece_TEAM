@@ -1,0 +1,41 @@
+
+
+.root {
+    -fx-font-family: Arial, sans-serif;
+    -fx-background-color: #f0f0f0;
+    -fx-padding: 10px;
+}
+
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 4, 0.5, 0.0, 0.0);
+    -fx-transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    -fx-background-color: #45a049;
+}
+
+.text-field, .password-field {
+    -fx-padding: 12px 20px;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-transition: border-color 0.3s ease-in-out;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #4CAF50;
+}
+
+.fade-in {
+    -fx-opacity: 0;
+    -fx-animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { -fx-opacity: 0; }
+    to { -fx-opacity: 1; }
+}
