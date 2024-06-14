@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:id="root" fx:controller="menu.MenuController" prefWidth="960" prefHeight="720" >
+    <VBox HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" alignment="center" styleClass="background">
+        <VBox fx:id="VBoxMenu" alignment="center" spacing="20">
+            <Button fx:id="neonButton1" text="PLAY" styleClass="neon-button"/>
+            <Button fx:id="neonButton2" text="SETTING" styleClass="neon-button"/>
+            <Button fx:id="neonButton3" text="EXIT" styleClass="neon-button"/>
+        </VBox>
+    </VBox>
+</HBox>

@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../Font/Montserrat-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Jaro';
+    src: url('../Font/Jaro-Regular-VariableFont_opsz.ttf');
+}
+
+/*
+Color 1 : #303841
+Color 2 : #3A4750
+Color 3 : #00ADB5 BIRU TERANG
+Color 4 : #EEEEEE putihnya
+*/
+
+.root {
+    -fx-font-family: 'Monstserrat';
+    -fx-font-weight: 500;
+    -fx-text-fill: white;
+    -fx-padding: 0;
+    -fx-background-color: black;
+}
+
+.background {
+    -fx-background-color: black;
+    -fx-background-image: url('images/WallpaperMenu3.png');
+    -fx-background-size: contain;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+#VBoxMenu{
+    -fx-padding: 0 0 210 0;
+}
+
+
+.neon-button {
+    -fx-font-size: 40px;
+    -fx-padding: 10px 20px;
+    -fx-background-color: transparent;
+    -fx-font-family: 'Jaro';
+    -fx-text-fill: white;
+    -fx-border-color: #ff00ff;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(255,0,255,0.8), 10, 0.5, 0, 0);
+    -fx-cursor: hand;
+    -fx-transition: -fx-background-color 0.5s ease-in-out, -fx-text-fill 0.5s ease-in-out, -fx-effect 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    -fx-pref-width: 250px;
+}
+
+.neon-button:hover {
+    -fx-background-color: rgba(255,0,255,1);
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(gaussian, rgba(255,0,255,1), 10, 0.0, 0, 0);
+    -fx-border-radius: 0;
+}
+
+.neon-button:pressed {
+    -fx-background-color: rgba(255,0,255,0.7);
+}
+

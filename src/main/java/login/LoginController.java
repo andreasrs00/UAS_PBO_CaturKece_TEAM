@@ -40,6 +40,7 @@ public class LoginController {
     @FXML
     private Label loginLabel;
 
+
     @FXML
     private Label caturLabel;
 
@@ -100,4 +101,5 @@ public class LoginController {
         }
         return false;
     }
+
 }

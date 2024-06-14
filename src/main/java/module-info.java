@@ -15,9 +15,10 @@ module caturkece.com.uas_pbo_caturkece_team {
     opens login to javafx.fxml;
     exports login;
 
-    opens Database.Controller to javafx.fxml;
-    opens Database.Model to javafx.graphics, javafx.fxml;
-    exports Database;
+// <<<<<<< alvian
+//     opens Database.Controller to javafx.fxml;
+//     opens Database.Model to javafx.graphics, javafx.fxml;
+//     exports Database;
 
 
 
@@ -25,5 +26,9 @@ module caturkece.com.uas_pbo_caturkece_team {
 
 
 
+
+
+    opens menu to javafx.fxml;
+    exports menu;
 
 }
