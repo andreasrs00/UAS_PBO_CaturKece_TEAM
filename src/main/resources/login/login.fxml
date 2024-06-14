@@ -13,6 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
+
 <HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController" prefWidth="960" prefHeight="720" >
     <VBox id="leftBox" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" alignment="center">
         <ImageView  fitWidth="360" fitHeight="300" pickOnBounds="true" preserveRatio="true">
@@ -31,14 +32,15 @@
             <RowConstraints minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="90.0" vgrow="SOMETIMES" />
         </rowConstraints>
-        <VBox id="VboxTulisan" GridPane.columnSpan="2" GridPane.rowIndex="0" >
-            <Label id="loginLabel" text="User Login" />
-            <Label id="loginLabelKata" text="Jangan cintai aku apa adanya jaaangan tuntutlah sesuatu biar kita jalan ke depan" />
-        </VBox>
-        <VBox id="VboxTextField" GridPane.columnSpan="2" GridPane.rowIndex="1">
-            <TextField promptText="Username" />
-            <PasswordField promptText="Password" />
-            <Button text="Login"/>
-        </VBox>
+
+        <Label id="loginLabel" text="User Login" GridPane.columnSpan="2" GridPane.rowIndex="0" />
+        <Label id="loginLabelKata" text="Jangan cintai aku apa adanya jaaangan tuntutlah sesuatu biar kita jalan ke depan" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+        <TextField fx:id="usernameField" promptText="Username" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+
+        <PasswordField fx:id="passwordField" promptText="Password" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+        <Button fx:id="loginButton" text="Login" onAction="#handleLogin" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+        <Label id="forgotPasswordLabel" text="Forgot Your Password ?" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+        <Label fx:id="errorMessageLabel" text="Error message" visible="false" GridPane.columnSpan="2" GridPane.rowIndex="6" />
+
     </GridPane>
 </HBox>

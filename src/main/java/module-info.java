@@ -2,6 +2,7 @@ module caturkece.com.uas_pbo_caturkece_team {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
+    requires java.sql;
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
@@ -14,6 +15,20 @@ module caturkece.com.uas_pbo_caturkece_team {
     opens login to javafx.fxml;
     exports login;
 
+// <<<<<<< alvian
+//     opens Database.Controller to javafx.fxml;
+//     opens Database.Model to javafx.graphics, javafx.fxml;
+//     exports Database;
+
+
+
+
+
+
+
+
+
     opens menu to javafx.fxml;
     exports menu;
+
 }
