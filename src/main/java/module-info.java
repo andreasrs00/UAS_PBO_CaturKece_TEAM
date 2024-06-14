@@ -14,4 +14,6 @@ module caturkece.com.uas_pbo_caturkece_team {
     opens login to javafx.fxml;
     exports login;
 
+    opens menu to javafx.fxml;
+    exports menu;
 }

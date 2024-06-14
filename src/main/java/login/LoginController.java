@@ -34,21 +34,4 @@ public class LoginController {
     @FXML
     private Label loginLabel;
 
-    @FXML
-    private Label caturLabel;
-
-    public void initialize() {
-        animateTextFill();
-    }
-
-    private void animateTextFill() {
-        Timeline timeline = new Timeline(
-                new KeyFrame(Duration.ZERO, new KeyValue(caturLabel.textFillProperty(), Color.RED)),
-                new KeyFrame(Duration.seconds(1), new KeyValue(caturLabel.textFillProperty(), Color.GREEN)),
-                new KeyFrame(Duration.seconds(2), new KeyValue(caturLabel.textFillProperty(), Color.BLUE)),
-                new KeyFrame(Duration.seconds(3), new KeyValue(caturLabel.textFillProperty(), Color.RED))
-        );
-        timeline.setCycleCount(Timeline.INDEFINITE);
-        timeline.play();
-    }
 }
