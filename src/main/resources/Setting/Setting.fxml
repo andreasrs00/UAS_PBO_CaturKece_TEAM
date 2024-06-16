@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="Setting.SettingController">
+    <Label text="Game Mode:" />
+    <ComboBox fx:id="modeComboBox" />
+
+    <Label text="Difficulty Level:" />
+    <ComboBox fx:id="difficultyComboBox" />
+
+    <Label text="Game Time:" />
+    <ComboBox fx:id="gameTimeComboBox" />
+
+    <Label text="Chessboard Theme:" />
+    <ComboBox fx:id="themeComboBox" />
+
+    <Label text="Sound Effects:" />
+    <Slider fx:id="soundEffectSlider" />
+
+    <Label text="Music:" />
+    <Slider fx:id="musicSlider" />
+
+    <Button fx:id="muteSoundEffectButton" text="Mute Sound" />
+    <Button fx:id="muteMusicButton" text="Mute Music" />
+
+    <Button fx:id="saveButton" text="Save Settings" />
+    <Button fx:id="exitButton" text="Exit Settings" />
+</VBox>

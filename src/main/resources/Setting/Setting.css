@@ -1,0 +1,38 @@
+/* CSS styling for the ChessGame application */
+
+VBox {
+    -fx-spacing: 5px;
+    -fx-padding: 100px;
+    -fx-alignment: center;
+    -fx-background-color: #DEB887;
+
+}
+
+Label {
+    -fx-font-size: 15px;
+    -fx-font-weight:bold;
+    -fx-font-family:times new roman;
+    -fx-text-fill:#D2691E;
+
+}
+
+ComboBox, Slider {
+    -fx-pref-width: 200px;
+    -fx-background-color:	#FF7F50;
+
+}
+
+Button {
+    -fx-pref-width: 120px;
+    -fx-font-size: 12pt;
+    -fx-background-color: #DEB887;
+    -fx-text-fill: #333333;
+}
+
+Button:hover {
+    -fx-background-color: 	#FF7F50;
+}
+
+Button:pressed {
+    -fx-background-color: 	#FF7F50;
+}
