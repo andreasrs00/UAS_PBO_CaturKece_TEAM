@@ -14,13 +14,15 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController" prefWidth="960" prefHeight="720" >
-    <VBox id="leftBox" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" alignment="center">
-        <ImageView  fitWidth="360" fitHeight="300" pickOnBounds="true" preserveRatio="true">
+
+<HBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.LoginController">
+    <VBox id="leftBox" prefHeight="720.0" prefWidth="960.0">
+        <ImageView fitWidth="360" fitHeight="300" pickOnBounds="true" preserveRatio="true">
             <image>
-<!--                <Image url="@images/Catur.png"/>-->
+                <Image url="@images/Catur.png"/>
             </image>
         </ImageView>
+        <Label fx:id="caturLabel" text="CATUR KECE" />
     </VBox>
     <GridPane id="loginPane" alignment="CENTER" hgap="10" vgap="10" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
         <columnConstraints>
