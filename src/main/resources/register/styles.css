@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../Font/Montserrat-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Jaro';
+    src: url('../Font/Jaro-Regular-VariableFont_opsz.ttf');
+}
+
+/*
+Color 1 : #303841
+Color 2 : #3A4750
+Color 3 : #00ADB5 BIRU TERANG
+Color 4 : #EEEEEE putihnya
+*/
+
+.root {
+    -fx-font-family: 'Monstserrat';
+    -fx-font-weight: 500;
+    -fx-text-fill: white;
+    -fx-padding: 0;
+}
+
+
+#leftBox {
+    -fx-background-color: #00ADB5;
+    -fx-alignment: center;
+    -fx-pref-width: 320px;
+    -fx-pref-height: 600px;
+    -fx-padding: 20;
+}
+
+#caturLabel {
+    -fx-text-fill: #303841;
+    -fx-font-size: 60px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'jaro';
+}
+
+#loginPane {
+    -fx-padding: 20;
+    -fx-vgap: 8;
+    -fx-hgap: 8;
+    -fx-background-color: #303841;
+}
+
+#loginLabel {
+    -fx-text-fill: #00ADB5;
+    -fx-font-size: 40px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Jaro';
+}
+
+#loginLabelKata{
+    -fx-text-fill: #00ADB5;
+    -fx-font-size: 18px;
+    -fx-wrap-text: true;
+    -fx-max-width: 400px;
+}
+
+#VboxTextField{
+    -fx-spacing: 16px;
+}
+
+
+TextField, PasswordField {
+    -fx-pref-width: 240px;
+    -fx-border-color: #00ADB5;
+    -fx-border-radius: 4;
+    -fx-background-radius: 4;
+    -fx-padding: 12 12;
+    -fx-font-family: 'Montserrat';
+    -fx-font-size: 14px;
+}
+
+Button {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 30px;
+    -fx-background-color: #00ADB5;
+    -fx-text-fill: #EEEEEE;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-font-size: 16px;
+}
+
+#forgotPasswordLabel {
+    -fx-text-fill: #00ADB5;
+    -fx-font-size: 16px;
+}

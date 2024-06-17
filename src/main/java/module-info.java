@@ -23,4 +23,7 @@ module caturkece.com.uas_pbo_caturkece_team {
         opens menu to javafx.fxml;
         exports menu;
 
+        opens register to javafx.fxml;
+        exports register;
+
 }
