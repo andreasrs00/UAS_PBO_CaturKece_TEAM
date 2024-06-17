@@ -8,6 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 import java.net.URL;
@@ -134,7 +135,12 @@ public class SettingController implements Initializable {
     private void handleExitButton(javafx.event.ActionEvent event) {
         System.out.println("Exit button clicked");
         playClickSound();
-        // Add exit functionality if needed
+
+        // Mengambil stage saat ini
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+
+        // Menutup stage (aplikasi) saat ini
+        stage.close();
     }
 
     private void handleMuteSoundEffect(javafx.event.ActionEvent event) {
