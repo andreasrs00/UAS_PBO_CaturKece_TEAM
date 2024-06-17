@@ -11,7 +11,7 @@
 /*
 Color 1 : #303841
 Color 2 : #3A4750
-Color 3 : #00ADB5 BIRU TERANG
+Color 3 : #ff00ff Ungu
 Color 4 : #EEEEEE putihnya
 */
 
@@ -24,67 +24,91 @@ Color 4 : #EEEEEE putihnya
 
 
 #leftBox {
-    -fx-background-color: #00ADB5;
-    -fx-alignment: center;
-    -fx-pref-width: 320px;
+    -fx-background-color: #ff00ff;
+    -fx-pref-width: 300px;
     -fx-pref-height: 600px;
     -fx-padding: 20;
+    -fx-background-image: url('images/BackgroundKiri2.jpg');
+    -fx-background-size: contain;
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-alignment: TOP_CENTER;
 }
 
-#caturLabel {
-    -fx-text-fill: #303841;
+#rightBox {
+    -fx-padding: 24;
+    -fx-background-color: #303841;
+    -fx-spacing: 40;
+}
+
+#chessLabel {
+    -fx-text-fill: white;
     -fx-font-size: 60px;
     -fx-font-weight: bold;
-    -fx-font-family: 'jaro';
-}
-
-#loginPane {
-    -fx-padding: 20;
-    -fx-vgap: 8;
-    -fx-hgap: 8;
-    -fx-background-color: #303841;
+    -fx-font-family: 'Jaro';
+    -fx-effect: dropshadow(gaussian, rgba(255,0,255,0.8), 16, 0.5, 0, 0);
 }
 
 #loginLabel {
-    -fx-text-fill: #00ADB5;
+    -fx-text-fill: #ff00ff;
     -fx-font-size: 40px;
     -fx-font-weight: bold;
-    -fx-font-family: 'Jaro';
+    -fx-font-family: 'Montserrat';
+    -fx-padding: 0 0 -16 0;
 }
 
 #loginLabelKata{
-    -fx-text-fill: #00ADB5;
+    -fx-text-fill: #ff00ff;
     -fx-font-size: 18px;
     -fx-wrap-text: true;
-    -fx-max-width: 400px;
+    -fx-min-height: 120px;
+    -fx-alignment: center;
+    -fx-text-alignment: justify;
 }
 
-#VboxTextField{
+#ContainerDalam{
+    -fx-pref-height: 200px;
+    -fx-spacing: 20;
+}
+
+#ContainerTextField{
     -fx-spacing: 16px;
 }
 
-
 TextField, PasswordField {
-    -fx-pref-width: 240px;
-    -fx-border-color: #00ADB5;
+    -fx-text-fill: #ff00ff;
+    -fx-border-color: #ff00ff;
+    -fx-font-weight: 800;
     -fx-border-radius: 4;
     -fx-background-radius: 4;
     -fx-padding: 12 12;
     -fx-font-family: 'Montserrat';
     -fx-font-size: 14px;
+    -fx-background-color: transparent;
 }
 
 Button {
     -fx-pref-width: 100px;
-    -fx-pref-height: 30px;
-    -fx-background-color: #00ADB5;
-    -fx-text-fill: #EEEEEE;
-    -fx-border-radius: 5;
-    -fx-background-radius: 5;
-    -fx-font-size: 16px;
+    -fx-font-size: 20px;
+    -fx-padding: 10 12;
+    -fx-background-color: transparent;
+    -fx-font-family: 'Jaro';
+    -fx-text-fill: white;
+    -fx-border-color: #ff00ff;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(255,0,255,0.8), 6, 0.5, 0, 0);
+    -fx-cursor: hand;
+    -fx-transition: -fx-background-color 0.5s ease-in-out, -fx-text-fill 0.5s ease-in-out, -fx-effect 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
+Button:hover {
+    -fx-background-color: rgba(255,0,255,1);
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(gaussian, rgba(255,0,255,1), 10, 0.0, 0, 0);
+    -fx-border-radius: 0;
+}
 #forgotPasswordLabel {
-    -fx-text-fill: #00ADB5;
+    -fx-text-fill: #ff00ff;
     -fx-font-size: 16px;
+    -fx-padding: 12 0;
 }
