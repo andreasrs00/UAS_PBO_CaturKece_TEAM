@@ -12,7 +12,7 @@ public class MenuApplication extends Application{
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/menu/menu.fxml"));
             Parent root = loader.load();
-            primaryStage.setTitle("Login and Signup");
+            primaryStage.setTitle("menu");
 
             Scene scene = new Scene(root, 960,720);
             scene.getStylesheets().add(getClass().getResource("/menu/styles.css").toExternalForm());

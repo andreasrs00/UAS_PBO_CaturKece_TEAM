@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<!--        FooController fooController = (FooController) fxmlLoader.getController();-->
 
 <HBox xmlns:fx="http://javafx.com/fxml/1" fx:id="root" fx:controller="menu.MenuController" prefWidth="960" prefHeight="720" >
     <VBox HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS" alignment="center" styleClass="background">
