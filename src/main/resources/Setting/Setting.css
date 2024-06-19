@@ -1,38 +1,74 @@
-/* CSS styling for the ChessGame application */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../Font/Montserrat-VariableFont_wght.ttf');
+}
 
-VBox {
-    -fx-spacing: 5px;
-    -fx-padding: 100px;
+@font-face {
+    font-family: 'Jaro';
+    src: url('../Font/Jaro-Regular-VariableFont_opsz.ttf');
+}
+
+/*
+Color 1 : #303841
+Color 2 : #3A4750
+Color 3 : #00ADB5 BIRU TERANG
+Color 4 : #EEEEEE putihnya
+*/
+
+.containerGedeSetting {
+    -fx-spacing: 16px;
     -fx-alignment: center;
-    -fx-background-color: #DEB887;
-
+    -fx-background-color: #303841;
 }
 
 Label {
-    -fx-font-size: 15px;
+    -fx-font-size: 20px;
     -fx-font-weight:bold;
-    -fx-font-family:times new roman;
-    -fx-text-fill:#D2691E;
-
+    -fx-font-family: 'Montserrat';
+    -fx-text-fill:#ff00ff;
 }
 
-ComboBox, Slider {
+#containerDouble{
+    -fx-spacing: 4px;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+    -fx-background-color: #303841;
+}
+
+ComboBox, Slider{
+    -fx-background-color: #ff00ff;
+    -fx-max-width: 200px;
+    -fx-font-family: 'Montserrat';
+    -fx-font-weight: 600;
+    -fx-font-size: 14px;
+}
+
+ComboxBox .list-cell:selected{
+    -fx-font-family: 'Montserrat';
+    -fx-background-color: #ff00ff;
+}
+
+.neon-button {
+    -fx-font-size: 20px;
+    -fx-padding: 10px 20px;
+    -fx-background-color: transparent;
+    -fx-font-family: 'Jaro';
+    -fx-text-fill: white;
+    -fx-border-color: #ff00ff;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(255,0,255,0.8), 10, 0.5, 0, 0);
+    -fx-cursor: hand;
+    -fx-transition: -fx-background-color 0.5s ease-in-out, -fx-text-fill 0.5s ease-in-out, -fx-effect 0.5s ease-in-out, opacity 0.5s ease-in-out;
     -fx-pref-width: 200px;
-    -fx-background-color:	#FF7F50;
-
 }
 
-Button {
-    -fx-pref-width: 120px;
-    -fx-font-size: 12pt;
-    -fx-background-color: #DEB887;
-    -fx-text-fill: #333333;
+.neon-button:hover {
+    -fx-background-color: rgba(255,0,255,1);
+    -fx-text-fill: black;
+    -fx-effect: dropshadow(gaussian, rgba(255,0,255,1), 10, 0.0, 0, 0);
+    -fx-border-radius: 0;
 }
 
-Button:hover {
-    -fx-background-color: 	#FF7F50;
-}
-
-Button:pressed {
-    -fx-background-color: 	#FF7F50;
+.neon-button:pressed {
+    -fx-background-color: rgba(255,0,255,0.7);
 }

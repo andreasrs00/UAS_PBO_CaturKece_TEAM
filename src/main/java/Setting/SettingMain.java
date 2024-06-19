@@ -14,7 +14,7 @@ public class  SettingMain extends Application {
     public void start(Stage primaryStage) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Setting/Setting.fxml"));
         Parent root = loader.load();
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root,960,720);
 
         // Load CSS file if needed
         scene.getStylesheets().add(getClass().getResource("/Setting/Setting.css").toExternalForm());

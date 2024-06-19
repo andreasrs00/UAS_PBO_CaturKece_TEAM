@@ -6,28 +6,41 @@
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Button?>
 
-<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="Setting.SettingController">
-    <Label text="Game Mode:" />
-    <ComboBox fx:id="modeComboBox" />
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="Setting.SettingController" styleClass="containerGedeSetting">
+    <VBox id="containerDouble">
+        <Label text="Game Mode:" />
+        <ComboBox fx:id="modeComboBox" />
+    </VBox>
 
-    <Label text="Difficulty Level:" />
-    <ComboBox fx:id="difficultyComboBox" />
+    <VBox id="containerDouble">
+        <Label text="Difficulty Level:" />
+        <ComboBox fx:id="difficultyComboBox" />
+    </VBox>
 
-    <Label text="Game Time:" />
-    <ComboBox fx:id="gameTimeComboBox" />
+    <VBox id="containerDouble">
+        <Label text="Game Time:" />
+        <ComboBox fx:id="gameTimeComboBox" />
+    </VBox>
 
-    <Label text="Chessboard Theme:" />
-    <ComboBox fx:id="themeComboBox" />
+    <VBox id="containerDouble">
+        <Label text="Chessboard Theme:" />
+        <ComboBox fx:id="themeComboBox" />
+    </VBox>
 
-    <Label text="Sound Effects:" />
-    <Slider fx:id="soundEffectSlider" />
+    <VBox id="containerDouble">
+        <Label text="Sound Effects:" />
+        <Slider fx:id="soundEffectSlider" />
+    </VBox>
 
-    <Label text="Music:" />
-    <Slider fx:id="musicSlider" />
+    <VBox id="containerDouble">
+        <Label text="Music:" />
+        <Slider fx:id="musicSlider" />
+    </VBox>
 
-    <Button fx:id="muteSoundEffectButton" text="Mute Sound" />
-    <Button fx:id="muteMusicButton" text="Mute Music" />
 
-    <Button fx:id="saveButton" text="Save Settings" />
-    <Button fx:id="exitButton" text="Exit Settings" />
+    <Button fx:id="muteSoundEffectButton" text="Mute Sound" styleClass="neon-button"/>
+    <Button fx:id="muteMusicButton" text="Mute Music" styleClass="neon-button"/>
+
+    <Button fx:id="saveButton" text="Save Settings" styleClass="neon-button"/>
+    <Button fx:id="exitButton" text="Exit Settings" styleClass="neon-button"/>
 </VBox>
