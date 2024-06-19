@@ -47,10 +47,10 @@ Framework yang Digunakan:
     cd [nama-direktori]
     
 3. Instal dependensi:
-    create project di intellij ultimate edition
-     pilih generator java fx
-      languange java
-        buildsystem maven
+- create project di intellij ultimate edition
+- pilih generator java fx
+- languange java
+- buildsystem maven
     
 
 ## Cara Penggunaan
