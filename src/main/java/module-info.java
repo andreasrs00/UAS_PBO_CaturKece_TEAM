@@ -12,6 +12,13 @@ module caturkece.com.uas_pbo_caturkece_team {
 //        requires org.kordamp.bootstrapfx.core;
 //        requires eu.hansolo.tilesfx;
 //        requires com.almasb.fxgl.all;
+        requires java.desktop;
+//        requires javafx.swing;
+        requires javafx.graphics;
+
+        opens Main to javafx.fxml;
+        exports Main;
+        exports pieces;
 
 
         opens login to javafx.fxml;

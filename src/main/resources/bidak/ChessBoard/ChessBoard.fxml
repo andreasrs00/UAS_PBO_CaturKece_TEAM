@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.Label?>
+
+<GridPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ChessboardController">
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+
+    <!-- Define squares on the chessboard -->
+    <StackPane fx:id="a1" GridPane.columnIndex="0" GridPane.rowIndex="7" styleClass="square light"/>
+    <StackPane fx:id="b1" GridPane.columnIndex="1" GridPane.rowIndex="7" styleClass="square dark"/>
+    <!-- Other squares definition goes here -->
+
+    <!-- Labels for file and rank -->
+    <Label text="8" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="rank-label"/>
+    <Label text="7" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="rank-label"/>
+    <!-- Other rank labels go here -->
+    <Label text="a" GridPane.columnIndex="0" GridPane.rowIndex="7" styleClass="file-label"/>
+    <Label text="b" GridPane.columnIndex="1" GridPane.rowIndex="7" styleClass="file-label"/>
+    <!-- Other file labels go here -->
+
+    <!-- pieces on the board -->
+    <StackPane fx:id="whiteKing" GridPane.columnIndex="4" GridPane.rowIndex="7" styleClass="piece king white"/>
+    <!-- Other pieces go here -->
+</GridPane>
