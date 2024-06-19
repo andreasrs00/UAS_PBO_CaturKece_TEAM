@@ -1,4 +1,4 @@
-![image](https://github.com/andreasrs00/UAS_PBO_CaturKece_TEAM/assets/114425441/f48b52bf-fc1c-4ea5-9c51-839ebeec7015)# [Catur Kece]
+# [Catur Kece]
 
 ## Deskripsi Proyek
 [Proyek catur OOP yang diusulkan mencakup beberapa fitur utama yang meningkatkan pengalaman pengguna dan fleksibilitas permainan. Sistem ini akan memiliki fitur login dan register yang memungkinkan pengguna untuk membuat akun dan mengelola profil mereka. Setelah masuk, pengguna dapat memilih untuk bermain melawan bot dengan tingkat kesulitan yang dapat disesuaikan, atau melawan pemain lain secara online di tab yang berbeda. Antarmuka pengguna akan dirancang dengan baik untuk memastikan navigasi yang mudah dan permainan yang intuitif. Setiap permainan catur akan dijalankan dalam lingkungan terisolasi, memastikan bahwa pengalaman bermain tetap lancar dan bebas dari gangguan. Fitur tambahan dapat mencakup penilaian elo, riwayat permainan.]
