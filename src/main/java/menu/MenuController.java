@@ -1,6 +1,7 @@
 package menu;
 
 import Setting.SettingMain;
+import Main.Main;
 import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -28,6 +29,12 @@ public class MenuController {
             // Open SettingMain
             openSettingMain();
         });
+
+        // Set action for neonButton1
+        neonButton1.setOnAction(event -> {
+            // Open Main application
+            openMain();
+        });
     }
 
     private void applyHoverTransition(Button button) {
@@ -52,6 +59,17 @@ public class MenuController {
         Stage stage = new Stage();
         try {
             settingMain.start(stage);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void openMain() {
+        // Launch Main application
+        Main mainApp = new Main();
+        Stage stage = new Stage();
+        try {
+            mainApp.start(stage);
         } catch (Exception e) {
             e.printStackTrace();
         }
