@@ -1,5 +1,6 @@
 package Setting;
 
+import Database.DatabaseConnection;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -10,12 +11,15 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import login.LoginController;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 
 public class SettingController implements Initializable {
-
     @FXML
     private ComboBox<String> modeComboBox;
 
@@ -23,7 +27,7 @@ public class SettingController implements Initializable {
     private ComboBox<String> difficultyComboBox;
 
     @FXML
-    private ComboBox<String> gameTimeComboBox;
+    private ComboBox<Integer> gameTimeComboBox;
 
     @FXML
     private ComboBox<String> themeComboBox;
@@ -49,24 +53,43 @@ public class SettingController implements Initializable {
     @FXML
     private Label statusLabel;
 
+    private int player_id;
+
     // Player for click sound
     private MediaPlayer clickSoundPlayer;
     private MediaPlayer musicPlayer;
     private boolean soundEffectMuted = false;
     private boolean musicMuted = false;
 
+    SettingMain settingMain = new SettingMain();
+
+    public void TakeId(){
+        LoginController login = new LoginController();
+        String username = "dewakipas";
+        String password = "dewakipas";
+
+        if (login.authenticate(username, password)) {
+            player_id = login.getUserId();
+            System.out.println("Player ID: " + player_id);
+
+        } else {
+            System.out.println("Authentication failed.");
+        }
+
+    }
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        TakeId();
         // Initialize ComboBoxes
         modeComboBox.getItems().addAll("Against Computer", "Two Players");
         difficultyComboBox.getItems().addAll("Easy", "Medium", "Hard");
-        gameTimeComboBox.getItems().addAll("6 minutes", "15 minutes");
-        themeComboBox.getItems().addAll("Classic", "Wooden", "Modern");
+        gameTimeComboBox.getItems().addAll(6,15);
+        themeComboBox.getItems().addAll("Classic", "Retro", "Modern");
 
         // Set default values
         modeComboBox.setValue("Against Computer");
         difficultyComboBox.setValue("Medium");
-        gameTimeComboBox.setValue("15 minutes");
+        gameTimeComboBox.setValue(15);
         themeComboBox.setValue("Classic");
 
         // Initialize Sliders
@@ -178,17 +201,25 @@ public class SettingController implements Initializable {
     private void saveSettings() {
         String mode = modeComboBox.getValue();
         String difficulty = difficultyComboBox.getValue();
-        String gameTime = gameTimeComboBox.getValue();
+        Integer gameTime = gameTimeComboBox.getValue();
         String theme = themeComboBox.getValue();
         double soundEffectVolume = soundEffectSlider.getValue();
         double musicVolume = musicSlider.getValue();
 
         System.out.println("Mode: " + mode);
         System.out.println("Difficulty: " + difficulty);
-        System.out.println("Game Time: " + gameTime);
+        System.out.println("Game Time: " + gameTime + " minute");
         System.out.println("Theme: " + theme);
         System.out.println("Sound Effect Volume: " + soundEffectVolume);
         System.out.println("Music Volume: " + musicVolume);
+        System.out.println(player_id);
+        boolean success = settingDatabase(player_id, mode, difficulty, gameTime, theme, soundEffectVolume, musicVolume);
+
+        if (success) {
+            System.out.println("Settings saved successfully");
+        } else {
+            System.out.println("Failed to save settings");
+        }
     }
 
     private void updateSoundEffectVolume() {
@@ -198,6 +229,29 @@ public class SettingController implements Initializable {
             } else {
                 clickSoundPlayer.setVolume(soundEffectSlider.getValue() / 100.0);
             }
+        }
+    }
+
+    public void setPlayer_id(int player_id) {
+        this.player_id = player_id;
+    }
+
+    private boolean settingDatabase(int player_id, String mode, String difficulty, Integer gameTime, String theme, double soundEffectVolume, double musicVolume) {
+        String query = "INSERT INTO setting (player_id, mode, difficulty, gameTime, theme, SoundEffectVolume, musicVolume) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1, player_id); // Menggunakan player_id yang diatur di sini
+            preparedStatement.setString(2, mode);
+            preparedStatement.setString(3, difficulty);
+            preparedStatement.setInt(4, gameTime);
+            preparedStatement.setString(5, theme);
+            preparedStatement.setDouble(6, soundEffectVolume);
+            preparedStatement.setDouble(7, musicVolume);
+            int rowsAffected = preparedStatement.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
         }
     }
 }

@@ -18,7 +18,7 @@
     </VBox>
 
     <VBox id="containerDouble">
-        <Label text="Game Time:" />
+        <Label text="Game Time (Minute):" />
         <ComboBox fx:id="gameTimeComboBox" />
     </VBox>
 
