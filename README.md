@@ -12,11 +12,13 @@ Framework yang Digunakan:
 - [Java.fx]
 
 ## Anggota Tim
-| Nama Anggota   | NIM     | Tugas        |
-|--------------  |---------|--------------|
-| [Nama 1]       | [NIM 1] | [Job Desc 1] |
-| [Nama 2]       | [NIM 2] | [Job Desc 2] |
-| [Nama 3]       | [NIM 3] | [Job Desc 3] |
+|     Nama Anggota         |          NIM        |             Tugas            |
+|    --------------        |     -----------     |        --------------        |
+|     [Andreas]            |     [221401051]     |       [  BackEnd  ]          |
+|     [Alvian]             |     [221401085]     |       [Database/BackEnd]     |
+|     [Fadhil]             |     [221401095]     |       [FrontEnd(Menu)]       |
+|     [Prawira]            |     [221401113]     |       [FrontEnd(inGame)]     |
+|     [Anggarda]           |     [221401086]     |       [FrontEnd(Settings)]   |
 
 ## Alat-Alat Lainnya
 - IDE/Editor: [Intellij Ultimate Edition]
@@ -55,17 +57,10 @@ Framework yang Digunakan:
 
 ## Cara Penggunaan
 ### Menjalankan Program
-1. Untuk menjalankan program, gunakan perintah berikut:
-    
-    
-2. Buka browser dan akses [URL jika menggunakan web app]
+- Langkah 1 : Jalankan Program LoginSignup
+- Langkah 2 : login register
+- Langkah 3 : atur ingin bermain berapa menit disettings
+- langkah 4 : klik play untuk memulai permainan
 
-### Contoh Penggunaan
-- Langkah 1: [Deskripsi Langkah 1]
-- Langkah 2: [Deskripsi Langkah 2]
-- Langkah 3: [Deskripsi Langkah 3]
+## Link Vidio 
 
-## Lisensi
-[Lisensi yang digunakan untuk proyek ini, misal: MIT, Apache 2.0]
-
----
