@@ -16,9 +16,10 @@ Framework yang Digunakan:
 |    --------------        |     -----------     |        --------------        |
 |     [Andreas]            |     [221401051]     |       [  BackEnd  ]          |
 |     [Alvian]             |     [221401085]     |       [Database/BackEnd]     |
+|     [Anggarda]           |     [221401086]     |       [FrontEnd(Settings)]   |
 |     [Fadhil]             |     [221401095]     |       [FrontEnd(Menu)]       |
 |     [Prawira]            |     [221401113]     |       [FrontEnd(inGame)]     |
-|     [Anggarda]           |     [221401086]     |       [FrontEnd(Settings)]   |
+
 
 ## Alat-Alat Lainnya
 - IDE/Editor: [Intellij Ultimate Edition]
