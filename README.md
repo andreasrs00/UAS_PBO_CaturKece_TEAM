@@ -66,4 +66,7 @@ Framework yang Digunakan:
 - langkah 4 : klik play untuk memulai permainan
 
 ## Link Vidio 
+https://youtu.be/IWFqaRQOSCA
+
+
 
